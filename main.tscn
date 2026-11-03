@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b4kyw0su6fn7l"]
+
+[ext_resource type="Script" uid="uid://beehchoexx0vk" path="res://player.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cksttnd12y5xr" path="res://shinchan2.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://dusg7n88bi8e4" path="res://chocopie.png" id="3_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx3la"]
+size = Vector2(54, 122)
+
+[node name="Node2D" type="Node2D" unique_id=501347546]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1862732597]
+script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=230933898]
+position = Vector2(12.500003, -38.5)
+scale = Vector2(0.306, 0.462)
+texture = ExtResource("2_h2yge")
+
+[node name="chocopie" type="Area2D" parent="." unique_id=1737146765]
+position = Vector2(771, -76)
+
+[node name="Sprite2D" type="Sprite2D" parent="chocopie" unique_id=1236204237]
+position = Vector2(363, 101)
+scale = Vector2(0.24999991, 0.363)
+texture = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chocopie" unique_id=1587728918]
+position = Vector2(360, 97)
+shape = SubResource("RectangleShape2D_hx3la")

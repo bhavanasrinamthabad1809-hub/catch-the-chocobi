@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wim2imoo23dv"]
+
+[ext_resource type="Script" uid="uid://bbk67vrknbiwt" path="res://chocopie.gd" id="1_i7w5k"]
+[ext_resource type="Texture2D" uid="uid://dusg7n88bi8e4" path="res://chocopie.png" id="2_6vms8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx3la"]
+size = Vector2(95, 152)
+
+[node name="chocopie" type="Area2D" unique_id=945397761]
+script = ExtResource("1_i7w5k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=818776912]
+position = Vector2(364, 95)
+scale = Vector2(0.24999991, 0.363)
+texture = ExtResource("2_6vms8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1649677203 groups=["chocopie"]]
+position = Vector2(358.5, 94)
+shape = SubResource("RectangleShape2D_hx3la")

@@ -6,3 +6,4 @@ func _physics_process(delta):
 	velocity = input_direction * 400
 	move_and_slide()
 	
+	

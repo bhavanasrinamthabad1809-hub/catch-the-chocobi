@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bvf3mnyvx4tio"]
+
+[ext_resource type="Script" uid="uid://bkt2ogul8urg6" path="res://capsium.gd" id="1_d2ojl"]
+[ext_resource type="Texture2D" uid="uid://clwvw5xi5q88m" path="res://capsium.png" id="2_usk5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r06o8"]
+size = Vector2(88, 91)
+
+[node name="capsium" type="Area2D" unique_id=574052143]
+script = ExtResource("1_d2ojl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1782363404]
+position = Vector2(16.000015, 246)
+rotation = 0.050614547
+scale = Vector2(0.13614014, 0.12466601)
+texture = ExtResource("2_usk5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=572266634]
+position = Vector2(20, 244.5)
+shape = SubResource("RectangleShape2D_r06o8")

@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bvf3mnyvx4tio" path="res://capsium.tscn" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://ghxqgq07vhkj" path="res://misae.png" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://ke54lfwg4o1d" path="res://leaf.tscn" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://c86kholj6y50" path="res://leaf.gd" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://ce5r1bwpmv5tp" path="res://bro.tscn" id="7_272bh"]
+[ext_resource type="Script" uid="uid://c7t4x6ws8v5ye" path="res://bro.gd" id="9_kek77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox4o7"]
 size = Vector2(316.99344, 385.28137)
@@ -16,6 +19,7 @@ size = Vector2(96, 296)
 [node name="Node2D" type="Node2D" unique_id=501347546]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=1862732597]
+position = Vector2(195, 619)
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=230933898]
@@ -27,7 +31,7 @@ texture = ExtResource("2_h2yge")
 position = Vector2(-439.5425, 425.32468)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/Sprite2D/pickuparea" unique_id=1769786630]
-position = Vector2(455.8824, -379.87012)
+position = Vector2(439.5425, -366.88312)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("RectangleShape2D_ox4o7")
 
@@ -35,7 +39,7 @@ shape = SubResource("RectangleShape2D_ox4o7")
 position = Vector2(468, 394)
 
 [node name="chocopie2" parent="." unique_id=1703931266 instance=ExtResource("3_lquwl")]
-position = Vector2(-465, 263)
+position = Vector2(-499, 301)
 
 [node name="chocopie3" parent="." unique_id=1966916737 instance=ExtResource("3_lquwl")]
 position = Vector2(-279, 84)
@@ -44,16 +48,16 @@ position = Vector2(-279, 84)
 position = Vector2(221, 35)
 
 [node name="chocopie5" parent="." unique_id=219745308 instance=ExtResource("3_lquwl")]
-position = Vector2(343, 284)
+position = Vector2(720, -176)
 
 [node name="chocopie6" parent="." unique_id=2081084798 instance=ExtResource("3_lquwl")]
-position = Vector2(363, 506)
+position = Vector2(340, 609)
 
 [node name="chocopie7" parent="." unique_id=1933348325 instance=ExtResource("3_lquwl")]
 position = Vector2(73, -69)
 
 [node name="chocopie11" parent="." unique_id=893714600 instance=ExtResource("3_lquwl")]
-position = Vector2(-259, 273)
+position = Vector2(-298, 300)
 
 [node name="chocopie8" parent="." unique_id=425143332 instance=ExtResource("3_lquwl")]
 position = Vector2(-76, -74)
@@ -71,13 +75,13 @@ position = Vector2(240, 371)
 position = Vector2(520, 53)
 
 [node name="capsium2" parent="." unique_id=523320103 instance=ExtResource("4_1bvp3")]
-position = Vector2(377, 259)
+position = Vector2(-411, 206)
 
 [node name="capsium3" parent="." unique_id=370702916 instance=ExtResource("4_1bvp3")]
-position = Vector2(238, 277)
+position = Vector2(-571, 135)
 
 [node name="capsium4" parent="." unique_id=751971948 instance=ExtResource("4_1bvp3")]
-position = Vector2(89, 294)
+position = Vector2(-271, 323)
 
 [node name="misae" type="Area2D" parent="." unique_id=834652951]
 position = Vector2(-40, 248)
@@ -88,13 +92,19 @@ scale = Vector2(0.47916666, 0.64215684)
 texture = ExtResource("5_lquwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="misae" unique_id=3093082]
-position = Vector2(797, -111)
+position = Vector2(793, -98)
 shape = SubResource("RectangleShape2D_272bh")
 
 [node name="leaf" parent="." unique_id=1247534574 instance=ExtResource("6_7mycd")]
-position = Vector2(-67, 33)
+position = Vector2(299, 229)
+script = ExtResource("7_5vw27")
 
-[node name="leaf2" parent="." unique_id=1237947498 instance=ExtResource("6_7mycd")]
-position = Vector2(-224, 141)
+[node name="leaf2" parent="." unique_id=1741460514 instance=ExtResource("6_7mycd")]
+position = Vector2(235, 369)
+script = ExtResource("7_5vw27")
+
+[node name="bro" parent="." unique_id=1883304986 instance=ExtResource("7_272bh")]
+position = Vector2(-284, 358)
+script = ExtResource("9_kek77")
 
 [connection signal="area_entered" from="player/Sprite2D/pickuparea" to="player" method="_on_pickuparea_area_entered"]

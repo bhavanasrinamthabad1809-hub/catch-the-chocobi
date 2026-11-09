@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ce5r1bwpmv5tp"]
+
+[ext_resource type="Texture2D" uid="uid://b72uy62uj1c2u" path="res://bro.png" id="1_mfisr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6f7k4"]
+size = Vector2(169, 227)
+
+[node name="bro" type="Area2D" unique_id=1883304986]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1817277822]
+position = Vector2(674, 86.00003)
+scale = Vector2(0.26000002, 0.343)
+texture = ExtResource("1_mfisr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=685930921]
+position = Vector2(681.5, 87)
+shape = SubResource("RectangleShape2D_6f7k4")

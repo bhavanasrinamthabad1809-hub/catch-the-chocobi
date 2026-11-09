@@ -3,14 +3,15 @@
 [ext_resource type="Script" uid="uid://beehchoexx0vk" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cksttnd12y5xr" path="res://shinchan2.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://wim2imoo23dv" path="res://chocopie.tscn" id="3_lquwl"]
-[ext_resource type="Texture2D" uid="uid://clwvw5xi5q88m" path="res://capsium.png" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://bkt2ogul8urg6" path="res://capsium.gd" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://bvf3mnyvx4tio" path="res://capsium.tscn" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://ghxqgq07vhkj" path="res://misae.png" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://ke54lfwg4o1d" path="res://leaf.tscn" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox4o7"]
 size = Vector2(316.99344, 385.28137)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r06o8"]
-size = Vector2(88, 91)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(96, 296)
 
 [node name="Node2D" type="Node2D" unique_id=501347546]
 
@@ -18,56 +19,82 @@ size = Vector2(88, 91)
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=230933898]
-position = Vector2(12.500003, -38.5)
+position = Vector2(292, 213)
 scale = Vector2(0.306, 0.462)
 texture = ExtResource("2_h2yge")
 
 [node name="pickuparea" type="Area2D" parent="player/Sprite2D" unique_id=1096411986]
+position = Vector2(-439.5425, 425.32468)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/Sprite2D/pickuparea" unique_id=1769786630]
-position = Vector2(11.4379, 44.37229)
+position = Vector2(455.8824, -379.87012)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("RectangleShape2D_ox4o7")
 
 [node name="chocopie" parent="." unique_id=945397761 instance=ExtResource("3_lquwl")]
-position = Vector2(430, 84)
+position = Vector2(468, 394)
 
 [node name="chocopie2" parent="." unique_id=1703931266 instance=ExtResource("3_lquwl")]
-position = Vector2(-78, 130)
+position = Vector2(-465, 263)
 
 [node name="chocopie3" parent="." unique_id=1966916737 instance=ExtResource("3_lquwl")]
-position = Vector2(-207, 143)
+position = Vector2(-279, 84)
 
 [node name="chocopie4" parent="." unique_id=1288000814 instance=ExtResource("3_lquwl")]
-position = Vector2(249, 32)
+position = Vector2(221, 35)
 
 [node name="chocopie5" parent="." unique_id=219745308 instance=ExtResource("3_lquwl")]
 position = Vector2(343, 284)
 
 [node name="chocopie6" parent="." unique_id=2081084798 instance=ExtResource("3_lquwl")]
-position = Vector2(21, 316)
+position = Vector2(363, 506)
 
 [node name="chocopie7" parent="." unique_id=1933348325 instance=ExtResource("3_lquwl")]
-position = Vector2(92, 31)
+position = Vector2(73, -69)
 
-[node name="capsium" type="Area2D" parent="." unique_id=1614187885]
-position = Vector2(502, 65)
-script = ExtResource("5_272bh")
+[node name="chocopie11" parent="." unique_id=893714600 instance=ExtResource("3_lquwl")]
+position = Vector2(-259, 273)
 
-[node name="Sprite2D" type="Sprite2D" parent="capsium" unique_id=332549862]
-position = Vector2(16.000015, 246)
-rotation = 0.050614547
-scale = Vector2(0.13614014, 0.12466601)
-texture = ExtResource("4_1bvp3")
+[node name="chocopie8" parent="." unique_id=425143332 instance=ExtResource("3_lquwl")]
+position = Vector2(-76, -74)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="capsium" unique_id=712706542]
-position = Vector2(20, 244.5)
-shape = SubResource("RectangleShape2D_r06o8")
+[node name="chocopie9" parent="." unique_id=2021915961 instance=ExtResource("3_lquwl")]
+position = Vector2(580, -14)
+
+[node name="chocopie10" parent="." unique_id=1367462437 instance=ExtResource("3_lquwl")]
+position = Vector2(573, 232)
+
+[node name="chocopie12" parent="." unique_id=1965237306 instance=ExtResource("3_lquwl")]
+position = Vector2(240, 371)
+
+[node name="capsium" parent="." unique_id=574052143 instance=ExtResource("4_1bvp3")]
+position = Vector2(520, 53)
+
+[node name="capsium2" parent="." unique_id=523320103 instance=ExtResource("4_1bvp3")]
+position = Vector2(377, 259)
+
+[node name="capsium3" parent="." unique_id=370702916 instance=ExtResource("4_1bvp3")]
+position = Vector2(238, 277)
+
+[node name="capsium4" parent="." unique_id=751971948 instance=ExtResource("4_1bvp3")]
+position = Vector2(89, 294)
 
 [node name="misae" type="Area2D" parent="." unique_id=834652951]
+position = Vector2(-40, 248)
 
 [node name="Sprite2D" type="Sprite2D" parent="misae" unique_id=1589767809]
+position = Vector2(796.00006, -101)
+scale = Vector2(0.47916666, 0.64215684)
+texture = ExtResource("5_lquwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="misae" unique_id=3093082]
+position = Vector2(797, -111)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="leaf" parent="." unique_id=1247534574 instance=ExtResource("6_7mycd")]
+position = Vector2(-67, 33)
+
+[node name="leaf2" parent="." unique_id=1237947498 instance=ExtResource("6_7mycd")]
+position = Vector2(-224, 141)
 
 [connection signal="area_entered" from="player/Sprite2D/pickuparea" to="player" method="_on_pickuparea_area_entered"]

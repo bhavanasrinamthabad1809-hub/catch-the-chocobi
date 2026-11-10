@@ -16,14 +16,14 @@ size = Vector2(316.99344, 385.28137)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
 size = Vector2(96, 296)
 
-[node name="Node2D" type="Node2D" unique_id=501347546]
+[node name="main" type="Node2D" unique_id=501347546]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=1862732597]
 position = Vector2(195, 619)
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=230933898]
-position = Vector2(292, 213)
+position = Vector2(45, -452)
 scale = Vector2(0.306, 0.462)
 texture = ExtResource("2_h2yge")
 
@@ -31,45 +31,48 @@ texture = ExtResource("2_h2yge")
 position = Vector2(-439.5425, 425.32468)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player/Sprite2D/pickuparea" unique_id=1769786630]
-position = Vector2(439.5425, -366.88312)
+position = Vector2(452.61438, -386.36362)
 scale = Vector2(1.0000001, 1)
 shape = SubResource("RectangleShape2D_ox4o7")
 
 [node name="chocopie" parent="." unique_id=945397761 instance=ExtResource("3_lquwl")]
-position = Vector2(468, 394)
+position = Vector2(626, 222)
 
 [node name="chocopie2" parent="." unique_id=1703931266 instance=ExtResource("3_lquwl")]
 position = Vector2(-499, 301)
 
 [node name="chocopie3" parent="." unique_id=1966916737 instance=ExtResource("3_lquwl")]
-position = Vector2(-279, 84)
+position = Vector2(-726, 20)
 
 [node name="chocopie4" parent="." unique_id=1288000814 instance=ExtResource("3_lquwl")]
-position = Vector2(221, 35)
+position = Vector2(-256, 37)
 
 [node name="chocopie5" parent="." unique_id=219745308 instance=ExtResource("3_lquwl")]
-position = Vector2(720, -176)
+position = Vector2(1097, 403)
+
+[node name="chocopie13" parent="." unique_id=682191258 instance=ExtResource("3_lquwl")]
+position = Vector2(983, 668)
 
 [node name="chocopie6" parent="." unique_id=2081084798 instance=ExtResource("3_lquwl")]
-position = Vector2(340, 609)
+position = Vector2(858, 356)
 
 [node name="chocopie7" parent="." unique_id=1933348325 instance=ExtResource("3_lquwl")]
-position = Vector2(73, -69)
+position = Vector2(71, 22)
 
 [node name="chocopie11" parent="." unique_id=893714600 instance=ExtResource("3_lquwl")]
 position = Vector2(-298, 300)
 
 [node name="chocopie8" parent="." unique_id=425143332 instance=ExtResource("3_lquwl")]
-position = Vector2(-76, -74)
+position = Vector2(-110, 565)
 
 [node name="chocopie9" parent="." unique_id=2021915961 instance=ExtResource("3_lquwl")]
-position = Vector2(580, -14)
+position = Vector2(838, -114)
 
 [node name="chocopie10" parent="." unique_id=1367462437 instance=ExtResource("3_lquwl")]
-position = Vector2(573, 232)
+position = Vector2(758, 75)
 
 [node name="chocopie12" parent="." unique_id=1965237306 instance=ExtResource("3_lquwl")]
-position = Vector2(240, 371)
+position = Vector2(585, 481)
 
 [node name="capsium" parent="." unique_id=574052143 instance=ExtResource("4_1bvp3")]
 position = Vector2(520, 53)
@@ -92,19 +95,45 @@ scale = Vector2(0.47916666, 0.64215684)
 texture = ExtResource("5_lquwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="misae" unique_id=3093082]
-position = Vector2(793, -98)
+position = Vector2(808, -106)
 shape = SubResource("RectangleShape2D_272bh")
 
 [node name="leaf" parent="." unique_id=1247534574 instance=ExtResource("6_7mycd")]
-position = Vector2(299, 229)
+position = Vector2(-89, 656)
 script = ExtResource("7_5vw27")
 
 [node name="leaf2" parent="." unique_id=1741460514 instance=ExtResource("6_7mycd")]
-position = Vector2(235, 369)
+position = Vector2(678, 709)
+script = ExtResource("7_5vw27")
+
+[node name="leaf3" parent="." unique_id=1501526011 instance=ExtResource("6_7mycd")]
+position = Vector2(1007, 800)
 script = ExtResource("7_5vw27")
 
 [node name="bro" parent="." unique_id=1883304986 instance=ExtResource("7_272bh")]
-position = Vector2(-284, 358)
+position = Vector2(-206, 439)
+script = ExtResource("9_kek77")
+
+[node name="bro4" parent="." unique_id=1215016448 instance=ExtResource("7_272bh")]
+position = Vector2(-306, 754)
+script = ExtResource("9_kek77")
+
+[node name="bro2" parent="." unique_id=675161647 instance=ExtResource("7_272bh")]
+position = Vector2(341, 636)
+rotation = -0.43932283
+scale = Vector2(0.6113775, 0.80423385)
+script = ExtResource("9_kek77")
+
+[node name="bro3" parent="." unique_id=2000937180 instance=ExtResource("7_272bh")]
+position = Vector2(729, 429.99994)
+rotation = -0.43932283
+scale = Vector2(0.9981455, 0.8632991)
+script = ExtResource("9_kek77")
+
+[node name="bro5" parent="." unique_id=2012740586 instance=ExtResource("7_272bh")]
+position = Vector2(-221, 131.00005)
+rotation = -0.43932283
+scale = Vector2(0.9981455, 0.8632991)
 script = ExtResource("9_kek77")
 
 [connection signal="area_entered" from="player/Sprite2D/pickuparea" to="player" method="_on_pickuparea_area_entered"]
